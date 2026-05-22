@@ -1,0 +1,151 @@
+.main {
+  max-width: 780px;
+
+  margin-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.orders-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-container {
+  border: 1px solid rgb(213, 217, 217);
+
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  margin-bottom: 24px;
+}
+
+.order-header {
+  background-color: rgb(240, 242, 242);
+
+  padding: 14px 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid rgb(213, 217, 217);
+}
+
+.order-header-left-section {
+  display: flex;
+  gap: 35px;
+}
+
+.order-header-label {
+  font-weight: 700;
+
+  margin-bottom: 2px;
+
+  font-size: 14px;
+}
+
+.order-header,
+.order-header div {
+  font-size: 14px;
+}
+
+.order-details-grid {
+  display: grid;
+
+  grid-template-columns: 90px 1fr 160px;
+
+  column-gap: 20px;
+
+  align-items: center;
+
+  padding: 24px 18px;
+
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+
+  object-fit: contain;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 700;
+
+  margin-bottom: 6px;
+}
+
+.product-delivery-date,
+.product-quantity {
+  font-size: 15px;
+
+  margin-bottom: 4px;
+}
+
+.buy-again-button {
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  background-color: rgb(25, 135, 84);
+
+  color: white;
+
+  border: none;
+
+  border-radius: 5px;
+
+  padding: 8px 12px;
+
+  cursor: pointer;
+}
+
+.buy-again-icon {
+  width: 18px;
+}
+
+.buy-again-message {
+  font-size: 14px;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.track-package-button {
+  width: 150px;
+  height: 38px;
+
+  background-color: white;
+
+  border: 1px solid rgb(213, 217, 217);
+
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.track-package-button:hover {
+  background-color: rgb(247, 250, 250);
+}
