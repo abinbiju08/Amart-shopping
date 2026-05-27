@@ -11,9 +11,7 @@ function Orders() {
 
   const { cart, orders, addToCart } = useCart();
   const navigate = useNavigate();
-
-  // FIX 2: track by "orderId-productId" so same product in different orders
-  // doesn't all show "Added" at the same time
+  
   const [addedKey, setAddedKey] = useState(null);
 
   function handleAddToCart(product, orderId) {
@@ -28,7 +26,7 @@ function Orders() {
   return (
     <>
 
-      {/* HEADER */}
+      {}
       <div className="header">
 
         <div className="left-section">
@@ -59,7 +57,7 @@ function Orders() {
 
       </div>
 
-      {/* MAIN */}
+      {}
       <div className="main">
 
         <div className="page-title">Your Orders</div>
@@ -103,8 +101,7 @@ function Orders() {
 
                   const product = products.find((p) => p.id === cartItem.id);
                   if (!product) return null;
-
-                  // FIX 2: unique key per order+product combination
+                
                   const itemKey = `${order.id}-${product.id}`;
                   const isAdded = addedKey === itemKey;
 
@@ -131,7 +128,7 @@ function Orders() {
                           Quantity: {cartItem.quantity}
                         </div>
 
-                        {/* FIX 1: no backgroundColor override — keeps button-primary green */}
+                        {}
                         <button
                           className="buy-again-button button-primary"
                           onClick={() => handleAddToCart(product, order.id)}
