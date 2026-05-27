@@ -8,7 +8,6 @@ import '../styles/shared/header.css';
 import '../styles/pages/checkout/checkout-header.css';
 import '../styles/pages/checkout/checkout.css';
 
-// Delivery options config
 const DELIVERY_OPTIONS = [
   { id: 'free',    label: 'Tuesday, May 26',   priceCents: 0,   display: 'FREE Shipping' },
   { id: 'medium',  label: 'Wednesday, May 20', priceCents: 499, display: '$4.99 - Shipping' },
@@ -19,8 +18,7 @@ function Checkout() {
 
   const { cart, updateQuantity, deleteFromCart, placeOrder } = useCart();
   const navigate = useNavigate();
-
-  // FIX 3: track selected delivery option per cart item
+  
   const [deliverySelections, setDeliverySelections] = useState({});
 
   function getDeliveryOption(cartItemId) {
@@ -46,7 +44,6 @@ function Checkout() {
       totalItems += cartItem.quantity;
       totalPriceCents += matchingProduct.priceCents * cartItem.quantity;
 
-      // FIX 3: add selected shipping cost per item
       const selectedOptionId = getDeliveryOption(cartItem.id);
       const selectedOption = DELIVERY_OPTIONS.find(o => o.id === selectedOptionId);
       totalShippingCents += selectedOption ? selectedOption.priceCents : 0;
@@ -65,7 +62,7 @@ function Checkout() {
   return (
     <>
 
-      {/* HEADER */}
+      {}
       <div className="checkout-header">
         <div className="header-content">
 
@@ -86,14 +83,14 @@ function Checkout() {
         </div>
       </div>
 
-      {/* MAIN */}
+      {}
       <div className="main">
 
         <div className="page-title">Review your order</div>
 
         <div className="checkout-grid">
 
-          {/* LEFT SIDE */}
+          {}
           <div className="order-summary">
 
             {cart.length === 0 && (
@@ -164,7 +161,7 @@ function Checkout() {
 
                     </div>
 
-                    {/* FIX 3: delivery options now update the total */}
+                    {}
                     <div className="delivery-options">
 
                       <div className="delivery-options-title">
@@ -197,7 +194,7 @@ function Checkout() {
 
           </div>
 
-          {/* RIGHT SIDE */}
+          {}
           <div className="payment-summary">
 
             <div className="payment-summary-title">Payment Summary</div>
@@ -207,7 +204,7 @@ function Checkout() {
               <div>${(totalPriceCents / 100).toFixed(2)}</div>
             </div>
 
-            {/* FIX 3: shipping now reflects selected options */}
+            {}
             <div className="payment-summary-row">
               <div>Shipping & handling:</div>
               <div>
@@ -240,7 +237,7 @@ function Checkout() {
               Place your order
             </button>
 
-            {/* FIX 4: Continue Shopping button */}
+            {}
             <Link
               to="/"
               style={{
