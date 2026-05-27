@@ -16,7 +16,6 @@ function Tracking() {
 
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
-  // Find the order and product from URL params
   const order = orders.find((o) => o.id === orderId);
   const cartItem = order?.items.find((item) => item.id === productId);
   const product = products.find((p) => p.id === productId);
@@ -24,7 +23,7 @@ function Tracking() {
   return (
     <>
 
-      {/* HEADER */}
+      {}
       <div className="header">
 
         <div className="left-section">
@@ -55,7 +54,7 @@ function Tracking() {
 
       </div>
 
-      {/* TRACKING PAGE */}
+      {}
       <div className="tracking-page">
 
         <Link className="back-to-orders-link" to="/orders">
