@@ -20,17 +20,15 @@
   z-index: 1000;
 }
 
-/* LEFT SECTION */
 
 .header .left-section {
   display: flex;
   align-items: center;
 }
 
-/* COMMON LINK — single source of truth for all nav buttons */
 
 .header .header-link {
-  display: inline-flex;       /* keeps the button tight around its content */
+  display: inline-flex;      
   align-items: center;
   justify-content: center;
 
@@ -39,19 +37,18 @@
   border: 1px solid transparent;
   border-radius: 4px;
 
-  padding: 8px 10px;          /* uniform padding — was 20px which over-stretched height */
+  padding: 8px 10px;      
 
   transition: border 0.15s;
 
   box-sizing: border-box;
-  position: relative;         /* anchor for .cart-quantity */
+  position: relative;      
 }
 
 .header .header-link:hover {
   border: 1px solid white;
 }
 
-/* LOGO */
 
 .header .logo {
   width: 220px;
@@ -75,7 +72,6 @@
   }
 }
 
-/* SEARCH SECTION */
 
 .header .middle-section {
   flex: 1;
@@ -117,7 +113,6 @@
   height: 20px;
 }
 
-/* RIGHT SECTION */
 
 .header .right-section {
   display: flex;
@@ -125,7 +120,6 @@
   gap: 8px;
 }
 
-/* ORDERS — no height override; inherits from .header-link */
 
 .header .orders-text {
   font-size: 15px;
@@ -133,10 +127,9 @@
   color: white;
 }
 
-/* CART — no height override; inherits from .header-link */
 
 .header .cart-link {
-  gap: 5px;                   /* space between icon and "Cart" text */
+  gap: 5px;                 
 }
 
 .header .cart-icon {
@@ -144,7 +137,7 @@
   height: 38px;
   object-fit: contain;
   display: block;
-  position: relative;         /* FIX: make icon the anchor for the quantity badge */
+  position: relative;         
 }
 
 .header .cart-text {
@@ -156,8 +149,8 @@
 .header .cart-quantity {
   position: absolute;
 
-  top: 14px;                  /* FIX: relative to .header-link (the button), */
-  left: 23px;                 /*      sits over the top-right of the cart icon */
+  top: 14px;                  
+  left: 23px;               
 
   color: black;
   font-size: 12px;
@@ -166,5 +159,5 @@
   width: 18px;
   text-align: center;
 
-  pointer-events: none;       /* prevent badge from stealing hover/click */
+  pointer-events: none;    
 }
