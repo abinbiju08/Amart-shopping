@@ -37,7 +37,6 @@
   }
 }
 
-/* ORDER SUMMARY */
 
 .order-summary {
   display: flex;
@@ -112,7 +111,6 @@
   margin-left: 5px;
 }
 
-/* DELIVERY OPTIONS */
 
 .delivery-options {
   padding-top: 5px;
@@ -149,7 +147,6 @@
   color: rgb(120, 120, 120);
 }
 
-/* PAYMENT SUMMARY */
 
 .payment-summary {
   border: 1px solid rgb(222, 222, 222);
