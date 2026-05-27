@@ -161,7 +161,7 @@ function Home() {
                   </select>
                 </div>
 
-                {/* Button switches to ✔ Added inside itself */}
+                {}
                 <button
                   className="add-to-cart-button button-primary"
                   onClick={() => handleAddToCart(product)}
